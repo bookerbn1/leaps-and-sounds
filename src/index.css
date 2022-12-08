@@ -1,0 +1,15 @@
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-image: url("https://static.wixstatic.com/media/3e0ae8_e8f9e651f7a34152823be2cf2a12e231~mv2.jpg/v1/fit/w_2500,h_1330,al_c/3e0ae8_e8f9e651f7a34152823be2cf2a12e231~mv2.jpg");
+background-color: #55d6aa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

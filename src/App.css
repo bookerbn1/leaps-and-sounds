@@ -1,0 +1,53 @@
+
+
+.App {
+  text-align: center;
+  background-image: url("https://static.wixstatic.com/media/3e0ae8_e8f9e651f7a34152823be2cf2a12e231~mv2.jpg/v1/fit/w_2500,h_1330,al_c/3e0ae8_e8f9e651f7a34152823be2cf2a12e231~mv2.jpg");
+background-color: #55d6aa;
+background-size: cover;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: red;
+}
+
+.logo {
+  float: right;
+}
+
+.App-link {
+  color: #55d6aa;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.background-image {
+  background-image:  url("https://static.wixstatic.com/media/3e0ae8_e8f9e651f7a34152823be2cf2a12e231~mv2.jpg/v1/fit/w_2500,h_1330,al_c/3e0ae8_e8f9e651f7a34152823be2cf2a12e231~mv2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100vh; 
+  width: 100vw;
+  background-position: center; 
+
+}
