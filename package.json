@@ -5,6 +5,8 @@
   "dependencies": {
     "axios": "0.18.0",
     "bootstrap": "5.2.0",
+    "concurrently": "^7.6.0",
+    "npm-run-all": "^4.1.5",
     "react": "16.8.6",
     "react-datepicker": "2.5.0",
     "react-dom": "16.8.6",
@@ -12,10 +14,13 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+  "start-js": "react-scripts start",
+  "backend-start": "nodemon backend/server.js",
+  "start": "concurrently \"npm-run-all -p backend-start start-js\"",
+  "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"npm-run-all -p backend-start start-js\""
   },
   "eslintConfig": {
     "extends": "react-app"
