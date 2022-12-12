@@ -16,7 +16,6 @@
     "react-toastify": "4.1.0",
     "toaster": "0.1.2",
     "toastr": "2.1.4"
-    //"proxy": "http://localhost:5000"
   },
   "scripts": {
     "start-js": "react-scripts start",
