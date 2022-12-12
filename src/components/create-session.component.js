@@ -26,7 +26,7 @@ export default class CreateSession extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/therapists/')
+    axios.get(process.env.REACT_APP_SERVER_URL + 'therapists/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -35,7 +35,8 @@ export default class CreateSession extends Component {
           })
         }
       })
-      axios.get('http://localhost:5000/clients/')
+
+      axios.get(process.env.REACT_APP_SERVER_URL + 'clients/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -93,7 +94,7 @@ export default class CreateSession extends Component {
 
     console.log(session);
 
-    axios.post('http://localhost:5000/sessions/add', session)
+    axios.post(process.env.REACT_APP_SERVER_URL + 'sessions/add', session)
       .then(res => console.log(res.data));
 
     window.location = '/';

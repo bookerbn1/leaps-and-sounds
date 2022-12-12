@@ -38,5 +38,3 @@ app.get("*", (req, res) => res.sendfile(path.resolve(__dirname, 'build', 'index.
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
-
-//https://github.com/shrutiicodes/mern-practices/blob/master/package.json https://www.youtube.com/watch?v=_5wEqHZJRu4 

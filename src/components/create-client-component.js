@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default class CreateClient extends Component {
   constructor(props) {
@@ -28,12 +30,13 @@ export default class CreateClient extends Component {
 
     console.log(client);
 
-    axios.post('http://localhost:5000/clients/add', client)
+    axios.post(process.env.REACT_APP_SERVER_URL + 'clients/add', client)
       .then(res => console.log(res.data));
 
     this.setState({
       clientName: ''
     })
+    toast.success('Client Successfully Created!');
   }
 
   render() {
@@ -54,6 +57,11 @@ export default class CreateClient extends Component {
             <input type="submit" value="Create Client" className="btn btn-primary" />
           </div>
         </form>
+        <ToastContainer
+                  closeButton={false}
+                  theme="dark"
+                  position="bottom-right"
+                />
       </div>
     )
   }

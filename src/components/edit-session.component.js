@@ -25,7 +25,7 @@ export default class EditSession extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/sessions/'+this.props.match.params.id)
+    axios.get(process.env.REACT_APP_SERVER_URL + 'sessions/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           name: response.data.name,
@@ -39,7 +39,7 @@ export default class EditSession extends Component {
         console.log(error);
       })
 
-    axios.get('http://localhost:5000/therapists/')
+      axios.get(process.env.REACT_APP_SERVER_URL + 'therapists/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({

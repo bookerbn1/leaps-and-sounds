@@ -25,8 +25,8 @@ export default class SessionsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/sessions/')
-      .then(response => {
+    axios.get(process.env.REACT_APP_SERVER_URL + 'sessions/')  
+    .then(response => {
         this.setState({ sessions: response.data })
       })
       .catch((error) => {
@@ -35,7 +35,7 @@ export default class SessionsList extends Component {
   }
 
   deleteSession(id) {
-    axios.delete('http://localhost:5000/sessions/'+id)
+      axios.delete(process.env.REACT_APP_SERVER_URL + 'sessions/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({

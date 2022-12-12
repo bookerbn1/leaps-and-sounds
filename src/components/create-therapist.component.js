@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default class CreateTherapist extends Component {
   constructor(props) {
@@ -28,12 +30,13 @@ export default class CreateTherapist extends Component {
 
     console.log(therapist);
 
-    axios.post('http://localhost:5000/therapists/add', therapist)
-      .then(res => console.log(res.data));
+    axios.post(process.env.REACT_APP_SERVER_URL + 'therapists/add', therapist)  
+    .then(res => console.log(res.data));
 
     this.setState({
       name: ''
     })
+    toast.success('Therapist Successfully Created!');
   }
 
   render() {
@@ -54,6 +57,11 @@ export default class CreateTherapist extends Component {
             <input type="submit" value="Create Therapist" className="btn btn-primary" />
           </div>
         </form>
+        <ToastContainer
+                  closeButton={false}
+                  theme="dark"
+                  position="bottom-right"
+                />
       </div>
     )
   }
