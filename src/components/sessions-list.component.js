@@ -25,7 +25,7 @@ export default class SessionsList extends Component {
   }
 
   componentDidMount() {
-    axios.get(process.env.REACT_APP_SERVER_URL + 'sessions/')  
+    axios.get("https://https-csds132-leaps-and-sounds-backend.onrender.com/sessions/")  // process.env.REACT_APP_SERVER_URL with replace "https://https-csds132-leaps-and-sounds-backend.onrender.com"
     .then(response => {
         this.setState({ sessions: response.data })
       })
@@ -35,7 +35,7 @@ export default class SessionsList extends Component {
   }
 
   deleteSession(id) {
-      axios.delete(process.env.REACT_APP_SERVER_URL + 'sessions/'+id)
+      axios.delete("https://https-csds132-leaps-and-sounds-backend.onrender.com/sessions/"+id)
       .then(response => { console.log(response.data)});
 
     this.setState({

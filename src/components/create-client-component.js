@@ -30,7 +30,7 @@ export default class CreateClient extends Component {
 
     console.log(client);
 
-    axios.post(process.env.REACT_APP_SERVER_URL + 'clients/add', client)
+    axios.post("https://https-csds132-leaps-and-sounds-backend.onrender.com/clients/add", client)
       .then(res => console.log(res.data));
 
     this.setState({

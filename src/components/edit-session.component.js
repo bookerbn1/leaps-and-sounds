@@ -25,7 +25,7 @@ export default class EditSession extends Component {
   }
 
   componentDidMount() {
-    axios.get(process.env.REACT_APP_SERVER_URL + 'sessions/'+this.props.match.params.id)
+    axios.get("https://https-csds132-leaps-and-sounds-backend.onrender.com/sessions/"+this.props.match.params.id)
       .then(response => {
         this.setState({
           name: response.data.name,
@@ -39,7 +39,7 @@ export default class EditSession extends Component {
         console.log(error);
       })
 
-      axios.get(process.env.REACT_APP_SERVER_URL + 'therapists/')
+      axios.get("https://https-csds132-leaps-and-sounds-backend.onrender.com/therapists/")
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -96,7 +96,7 @@ export default class EditSession extends Component {
 
     console.log(session);
 
-    axios.post('http://localhost:5000/sessions/update/' + this.props.match.params.id, session)
+    axios.post('https://https-csds132-leaps-and-sounds-backend.onrender.com/sessions/update/' + this.props.match.params.id, session)
       .then(res => console.log(res.data));
 
     window.location = '/';

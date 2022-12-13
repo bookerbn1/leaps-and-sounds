@@ -26,7 +26,7 @@ export default class CreateSession extends Component {
   }
 
   componentDidMount() {
-    axios.get(process.env.REACT_APP_SERVER_URL + 'therapists/')
+    axios.get("https://https-csds132-leaps-and-sounds-backend.onrender.com/therapists/")
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -36,7 +36,7 @@ export default class CreateSession extends Component {
         }
       })
 
-      axios.get(process.env.REACT_APP_SERVER_URL + 'clients/')
+      axios.get("https://https-csds132-leaps-and-sounds-backend.onrender.com/clients/")
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -94,7 +94,7 @@ export default class CreateSession extends Component {
 
     console.log(session);
 
-    axios.post(process.env.REACT_APP_SERVER_URL + 'sessions/add', session)
+    axios.post("https://https-csds132-leaps-and-sounds-backend.onrender.com/sessions/add", session)
       .then(res => console.log(res.data));
 
     window.location = '/';
