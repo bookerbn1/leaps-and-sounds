@@ -30,7 +30,7 @@ app.use('/sessions', sessionsRouter);
 app.use('/therapists', therapistsRouter);
 app.use('/clients', clientsRouter);
 
-/* server prodcution assets 
+/* server prodcution assets
 if(process.env.NODE_ENV === "production")
 app.use(express.static(path.join("../build")))
 app.get("*", (req, res) => res.sendfile(path.resolve(__dirname, 'build', 'index.html')))
