@@ -59,7 +59,7 @@ export default class CreateSession extends Component {
 
   onChangeClient(e) {
     this.setState({
-      client: e.target.value
+      clientName: e.target.value
     })
   }
 
