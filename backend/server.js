@@ -9,9 +9,10 @@ dotenv.config({path: path.resolve(__dirname, '../backend/.env') });;
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors); /*({
-  origin: ["http://localhost:3000", "https://csds132-leaps-and-sounds-backend.onrender.com"],
-}) */
+app.use(cors({
+  origin: ["http://localhost:3000", "https://csds132-leaps-and-sounds.onrender.com"],
+})
+); 
 
 app.use(express.json());
 
