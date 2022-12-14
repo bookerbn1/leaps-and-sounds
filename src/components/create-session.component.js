@@ -86,7 +86,7 @@ export default class CreateSession extends Component {
 
     const session = {
       name: this.state.name,
-      clientName: this.state.clientName,
+      client: this.state.clientName,
       description: this.state.description,
       cost: this.state.cost,
       date: this.state.date
@@ -130,10 +130,10 @@ export default class CreateSession extends Component {
               value={this.state.clientName}
               onChange={this.onChangeClientName}>
               {
-                this.state.clients.map(function(clientName) {
+                this.state.clients.map(function(client) {
                   return <option 
-                    key={clientName}
-                    value={clientName}>{clientName}
+                    key={client}
+                    value={client}>{client}
                     </option>;
                 })
               }
