@@ -94,7 +94,7 @@ export default class CreateSession extends Component {
 
     console.log(session);
 
-    axios.post("https://https-csds132-leaps-and-sounds-backend.onrender.com/sessions/add/", session)
+    axios.post("https://https-csds132-leaps-and-sounds-backend.onrender.com/sessions/add", session)
       .then(res => console.log(res.data));
 
     window.location = '/';
