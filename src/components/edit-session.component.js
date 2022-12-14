@@ -20,7 +20,8 @@ export default class EditSession extends Component {
       description: '',
       cost: 70,
       date: new Date(),
-      therapists: []
+      therapists: [],
+      clients: []
     }
   }
 
@@ -61,7 +62,7 @@ export default class EditSession extends Component {
 
   onChangeClient(e) {
     this.setState({
-      client: e.target.value
+      clientName: e.target.value
     })
   }
 
